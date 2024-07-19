@@ -143,6 +143,7 @@ public class BlogService {
 
     public void saveArticleImages(List<MultipartFile> images,Long articleId) {
         Article article = blogRepository.findById(articleId).orElseThrow(ArticleNotFoundException::new);
+        authorizeArticleAuthor(article);
         if (images != null && !images.isEmpty()){
             for(MultipartFile file : images) {
                 UUID uuid = UUID.randomUUID();
