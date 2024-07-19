@@ -46,6 +46,16 @@
                     <h1 class="fw-bolder mb-1" th:text="${article.title}"></h1>
                     <div class="text-muted fst-italic mb-2" th:text="|작성일 ${#temporals.format(article.createdAt, 'yyyy-MM-dd HH:mm')} 글쓴이 ${article.author}|"></div>
                 </header>
+
+                <div class="mt-4">
+                    <div class="d-flex flex-wrap">
+                        <img th:each="image : ${article.images}"
+                             th:src="@{/articleImages/{filename}(filename=${image.filename})}"
+                             class="img-thumbnail"
+                             alt="Article Image">
+                    </div>
+                </div>
+
                 <section class="mb-5">
                     <p class="fs-5 mb-4" th:text="${article.content}"></p>
                 </section>
@@ -54,6 +64,9 @@
                         class="btn btn-primary btn-sm">수정</button>
                 <button type="button" id="delete-btn"
                         class="btn btn-secondary btn-sm">삭제</button>
+                <button type="button" id="image-upload-btn"
+                        th:onclick="|location.href='@{/ImageUpload?id={articleId}(articleId=${article.id})}'|"
+                        class="btn btn-outline-primary btn-sm">이미지 업로드</button>
             </article>
 
             <hr class="mt-5">

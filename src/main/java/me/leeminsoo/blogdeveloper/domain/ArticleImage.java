@@ -22,4 +22,8 @@ public class ArticleImage {
     @ManyToOne
     @JoinColumn(name = "article_Id")
     private Article article;
+
+    public String getFilename() {
+        return url.substring(url.lastIndexOf("/") + 1);
+    }
 }

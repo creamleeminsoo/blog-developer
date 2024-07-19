@@ -13,8 +13,8 @@ spring:
       client:
         registration:
           google:
-            client-id: googleid
-            client-secret: googlesecret
+            client-id: google
+            client-secret: secret
             scope:
               - email
               - profile
@@ -63,7 +63,7 @@ spring:
 
 
 file:
-  profileImagePath: C:\Temp\profileImageUpload
+  profileImagePath: C:\Temp\profileImageUpload\
 
 jwt:
   issuer: ajufresh@gmail.com

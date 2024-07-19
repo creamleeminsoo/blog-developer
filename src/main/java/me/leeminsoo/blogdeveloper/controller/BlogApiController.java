@@ -32,8 +32,8 @@ public class BlogApiController {
                 .body(savedArticle);
     }
     @PostMapping("/api/articles/image")
-    public ResponseEntity<Void> addArticleImage(@ModelAttribute ArticleImageUpload imageUpload) {
-        blogService.saveArticleImages(imageUpload.getImages());
+    public ResponseEntity<Void> addArticleImage(@ModelAttribute ArticleImageUpload imageUpload,@RequestParam("articleId") Long articleId) {
+        blogService.saveArticleImages(imageUpload.getImages(),articleId);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 

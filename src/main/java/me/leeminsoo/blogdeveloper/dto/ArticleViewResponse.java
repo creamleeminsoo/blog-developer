@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import me.leeminsoo.blogdeveloper.domain.Article;
+import me.leeminsoo.blogdeveloper.domain.ArticleImage;
 import me.leeminsoo.blogdeveloper.domain.Comment;
 
 import java.time.LocalDateTime;
@@ -19,6 +20,7 @@ public class ArticleViewResponse {
     private LocalDateTime createdAt;
     private String author;
     private List<Comment> comments;
+    private List<ArticleImage> images;
 
     public ArticleViewResponse(Article article){
         this.id = article.getId();
@@ -27,6 +29,7 @@ public class ArticleViewResponse {
         this.createdAt = article.getCreatedAt();
         this.author = article.getAuthor();
         this.comments = article.getComments();
+        this.images = article.getArticleImages();
     }
 
 

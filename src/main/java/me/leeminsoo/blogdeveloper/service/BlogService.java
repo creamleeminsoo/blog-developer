@@ -141,7 +141,8 @@ public class BlogService {
 
 
 
-    public void saveArticleImages(List<MultipartFile> images) { //이건 나중에 합쳐야함
+    public void saveArticleImages(List<MultipartFile> images,Long articleId) {
+        Article article = blogRepository.findById(articleId).orElseThrow(ArticleNotFoundException::new);
         if (images != null && !images.isEmpty()){
             for(MultipartFile file : images) {
                 UUID uuid = UUID.randomUUID();
@@ -149,17 +150,27 @@ public class BlogService {
                 File destinationFile = new File(uploadFolder + imageFileName);
 
                 try {
-                    file.transferTo(destinationFile);
+                    file.transferTo(destinationFile); //파일객체 저장
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                ArticleImage articleImage = ArticleImage.builder()
-                        .url("/articleImages/"+imageFileName)
-                        .build();
+                if(!(article == null)) {
+                    ArticleImage articleImage = ArticleImage.builder()
+                            .url("/articleImages/" + imageFileName)
+                            .article(article)
+                            .build();
+
+                    imageRepository.save(articleImage);
+                }
+
 
             }
         }
 
+    }
+
+    public List<ArticleImage> getImagesByArticleId(Long id) {
+        return imageRepository.findByArticleId(id);
     }
 
 

@@ -26,14 +26,6 @@
                 <button th:if="${article.id} != null" type="button" id="modify-btn" class="btn btn-outline-primary">수정</button>
                 <button th:if="${article.id} == null" type="button" id="create-btn" class="btn btn-outline-primary">등록</button>
 
-
-            <form action="/api/articles/1/image" method="POST" enctype="multipart/form-data">
-                <label for="images">이미지:</label>
-                <input type="file" id="images" name="images" multiple>
-
-                <button type="submit">이미지 업로드</button>
-            </form>
-
             </article>
 
         </div>

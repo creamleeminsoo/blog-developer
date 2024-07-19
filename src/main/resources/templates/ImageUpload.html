@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 업로드</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .font-weight-bold {
+            font-size: 2.5rem;
+        }
+        .bg-custom {
+            background-color: #EBFBFE;
+        }
+        .preview-container img {
+            max-width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="p-5 mb-5 text-center bg-custom">
+    <h1 class="mb-3 font-weight-bold">이미지 업로드</h1>
+</div>
+
+<div class="container mt-5">
+    <section class="mt-5">
+        <h4>이미지 업로드</h4>
+        <form id="image-upload-form" action="/api/articles/image" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file-upload" name="images" multiple>
+            <input type="hidden" id="articleId" th:value="${article.id}">
+            <button type="submit" class="btn btn-outline-primary mt-3">이미지 업로드</button>
+        </form>
+        <div class="preview-container mt-3">
+
+        </div>
+    </section>
+</div>
+
+<script src="/js/image.js"></script>
+</body>
+</html>
