@@ -92,10 +92,12 @@ public class BlogViewController {
     public String index(Model model) {
         List<Article> articles = blogService.findRecentArticles();
         List<Comment> comments = blogService.findRecentComments();
+        List<ArticleImage> images = blogService.findRecentImage();
 
 
         model.addAttribute("articles", articles);
         model.addAttribute("comments", comments);
+        model.addAttribute("images", images);
         return "index";
     }
 

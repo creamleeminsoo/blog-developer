@@ -155,14 +155,14 @@ public class BlogService {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                if(!(article == null)) {
+
                     ArticleImage articleImage = ArticleImage.builder()
                             .url("/articleImages/" + imageFileName)
                             .article(article)
                             .build();
 
                     imageRepository.save(articleImage);
-                }
+
 
 
             }
@@ -172,6 +172,10 @@ public class BlogService {
 
     public List<ArticleImage> getImagesByArticleId(Long id) {
         return imageRepository.findByArticleId(id);
+    }
+
+    public List<ArticleImage> findRecentImage(){
+        return imageRepository.findTop10ByOrderById();
     }
 
 

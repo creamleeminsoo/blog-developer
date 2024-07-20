@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5a2053-f3ad-48e8-b3b1-a3edbc7910dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ImageUpload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/ArticleImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/ArticleImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleViewResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ImageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

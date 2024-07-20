@@ -60,8 +60,8 @@
             <h4>게시판</h4>
             <ul class="list-group">
                 <li class="list-group-item"><a href="/articles">일기장 목록</a></li>
-                <li class="list-group-item"><a href="/board/tech">기술</a></li>
-                <li class="list-group-item"><a href="/board/lifestyle">라이프스타일</a></li>
+                <li class="list-group-item"><a href="/articles/1">기술</a></li>
+                <li class="list-group-item"><a href="/articles/2">기능</a></li>
             </ul>
             <h4 class="mt-4">최신 댓글</h4>
             <div class="comment-section list-group" id="recent-comments">
@@ -80,14 +80,19 @@
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2>글 목록</h2>
-                <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
-                    <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search" name="query">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
-                </form>
+
             </div>
 
             <div class="list-group">
                 <a th:each="article : ${articles}" th:href="@{/articles/{id}(id=${article.id})}" th:text="${article.title}" class="list-group-item list-group-item-action"></a>
+            </div>
+            <div class="mt-5 mb-3">
+                <h3 class="mb-3">최근 업로드된 이미지</h3>
+                <div class="d-flex flex-row flex-wrap align-items-center">
+                    <div th:each="image : ${images}" class="mr-3 mb-3">
+                        <img th:src="@{/articleImages/{filename}(filename=${image.filename})}" class="img-thumbnail" alt="Article Image" style="width: 200px; height: auto;">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
