@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 부트스트랩 v4.1.3 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>Diary</title>
     <style>
@@ -29,9 +28,15 @@
             background-color: #EBFBFE;
         }
         .font-weight-bold {
-            font-size: 2.5rem; /* 헤딩 크기 설정 */
-            font-weight: bold;
+            font-size: 2.5rem;
+            color: #191129;
         }
+        .welcome-message {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6c757d;
+        }
+
     </style>
 </head>
 <body>
@@ -55,7 +60,6 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- 왼쪽 사이드바 -->
         <div class="col-md-3 sidebar">
             <h4>게시판</h4>
             <ul class="list-group">
@@ -76,7 +80,7 @@
         <div class="col-md-9 main-content">
             <div class="p-5 mb-5 text-center bg-custom">
                 <h1 id="my-blog-link" class="mb-3 font-weight-bold">Diary</h1>
-                <h4 class="mb-3">일기장에 오신 것을 환영합니다.</h4>
+                <h4 class="mb-3 welcome-message">일기장에 오신 것을 환영합니다.</h4>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2>글 목록</h2>

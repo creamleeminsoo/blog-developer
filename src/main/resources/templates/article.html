@@ -11,6 +11,7 @@
         }
         .font-weight-bold {
             font-size: 2.5rem;
+            color: #191129;
         }
         .bg-custom {
             background-color: #EBFBFE;
@@ -18,10 +19,11 @@
       .welcome-message {
             font-size: 1.5rem;
             font-weight: bold;
+            color: #6c757d;
         }
         .left-image {
-            float: left; /* 왼쪽 배치 */
-            margin-right: 20px; /* 오른쪽 여백 */
+            float: left;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -43,7 +45,7 @@
             <article>
                 <input type="hidden" id="article-id" th:value="${article.id}">
                 <header class="mb-4">
-                    <h1 class="fw-bolder mb-1" th:text="${article.title}"></h1>
+                    <h3 class="fw-bolder mb-1" th:text="${article.title}"></h3>
                     <div class="text-muted fst-italic mb-2" th:text="|작성일 ${#temporals.format(article.createdAt, 'yyyy-MM-dd HH:mm')} 글쓴이 ${article.author}|"></div>
                 </header>
 

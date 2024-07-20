@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5a2053-f3ad-48e8-b3b1-a3edbc7910dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
