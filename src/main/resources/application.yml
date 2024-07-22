@@ -13,7 +13,7 @@ spring:
       client:
         registration:
           google:
-            client-id: google
+            client-id: id
             client-secret: secret
             scope:
               - email

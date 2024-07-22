@@ -13,7 +13,7 @@ import me.leeminsoo.blogdeveloper.domain.Article;
 @Getter
 public class AddArticleRequest {
     @NotNull
-    @Size(min =1, max = 10)
+    @Size(min =1, max = 20)
     private String title;
 
     @NotNull

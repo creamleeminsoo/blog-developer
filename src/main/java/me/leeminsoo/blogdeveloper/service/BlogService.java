@@ -151,7 +151,7 @@ public class BlogService {
                 File destinationFile = new File(uploadFolder + imageFileName);
 
                 try {
-                    file.transferTo(destinationFile); //파일객체 저장
+                    file.transferTo(destinationFile);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
