@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.security.Principal;
 import java.util.List;
@@ -32,7 +33,13 @@ public class BlogApiController {
                 .body(savedArticle);
     }
     @PostMapping("/api/articles/image")
-    public ResponseEntity<Void> addArticleImage(@ModelAttribute ArticleImageUpload imageUpload,@RequestParam("articleId") Long articleId) {
+    public ResponseEntity<String> addArticleImage(@ModelAttribute @Validated ArticleImageUpload imageUpload,@RequestParam("articleId") Long articleId) {
+        List<MultipartFile> images = imageUpload.getImages();
+        for (MultipartFile image : images) {
+            if (image.isEmpty()) {
+                return ResponseEntity.badRequest().body("빈 파일은 업로드할 수 없습니다.");
+            }
+        }
         blogService.saveArticleImages(imageUpload.getImages(),articleId);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

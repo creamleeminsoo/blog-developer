@@ -21,6 +21,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 
@@ -53,8 +57,19 @@ public class BlogService {
     public void delete(long id) {
         Article article = blogRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("not found : " + id));
-
         authorizeArticleAuthor(article);
+        List<ArticleImage> images = imageRepository.findByArticleId(id);
+
+        for (ArticleImage image : images) {
+            String imagePath = image.getUrl();
+            String fileName = imagePath.substring(imagePath.lastIndexOf('/') + 1);
+            Path filePath = Paths.get(uploadFolder, fileName);
+
+            File file = filePath.toFile();
+            if (file.exists()) {
+                file.delete();
+            }
+        }
         blogRepository.delete(article);
     }
 
@@ -97,9 +112,9 @@ public class BlogService {
 
     public List<Article> getArticleSorted(String order) {
         if (order.equals("desc")) {
-            return blogRepository.findAllByOrderByCreatedAtDesc();
+            return blogRepository.findAllByOrderByIdDesc();
         } else {
-            return blogRepository.findAllByOrderByCreatedAtAsc();
+            return blogRepository.findAllByOrderByIdAsc();
         }
 
     }
