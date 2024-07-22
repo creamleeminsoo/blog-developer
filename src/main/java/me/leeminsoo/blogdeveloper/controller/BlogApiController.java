@@ -19,10 +19,6 @@ import java.util.List;
 public class BlogApiController {
     private final BlogService blogService;
 
-    @GetMapping("favicon.ico")
-    @ResponseBody
-    public void returnNoFavicon() {
-    }
 
 
 
@@ -44,22 +40,6 @@ public class BlogApiController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping("/api/articles")
-    public ResponseEntity<List<ArticleResponse>> findAllArticles() {
-        List<ArticleResponse> articles = blogService.findAll()
-                .stream()
-                .map(ArticleResponse::new)
-                .toList();
-        return ResponseEntity.ok()
-                .body(articles);
-    }
-
-    @GetMapping("/api/articles/{id}")
-    public ResponseEntity<ArticleResponse> findArticle(@PathVariable(name = "id") long id) {
-        Article article = blogService.findById(id);
-        return ResponseEntity.ok()
-                .body(new ArticleResponse(article));
-    }
 
     @DeleteMapping("/api/articles/{id}")
     public ResponseEntity<Void> deleteArticle(@PathVariable(name = "id") long id) {
@@ -85,14 +65,14 @@ public class BlogApiController {
     }
 
     @DeleteMapping("/api/comments/{commentId}")
-    public ResponseEntity<Void> deleteComment(@PathVariable long commentId){
+    public ResponseEntity<Void> deleteComment(@PathVariable(name = "commentId") Long commentId){
 
         blogService.comment_delete(commentId);
         return ResponseEntity.ok()
                 .build();
     }
     @PutMapping("/api/comments/{commentId}")
-    public ResponseEntity<Comment> updateComment(@PathVariable long commentId,
+    public ResponseEntity<Comment> updateComment(@PathVariable(name = "commentId") Long commentId,
                                                  @RequestBody @Validated UpdateCommentRequest request) {
         Comment updateComment = blogService.comment_update(commentId,request);
         return ResponseEntity.ok()

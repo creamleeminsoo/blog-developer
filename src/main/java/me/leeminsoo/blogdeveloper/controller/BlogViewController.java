@@ -9,6 +9,7 @@ import me.leeminsoo.blogdeveloper.dto.ArticleListViewResponse;
 import me.leeminsoo.blogdeveloper.dto.ArticleViewResponse;
 import me.leeminsoo.blogdeveloper.dto.CommentViewResponse;
 import me.leeminsoo.blogdeveloper.service.BlogService;
+import org.springframework.data.domain.Page;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -35,12 +36,25 @@ public class BlogViewController {
 
     private final BlogService blogService;
 
+    @GetMapping("favicon.ico")
+    @ResponseBody
+    public void returnNoFavicon() {
+    }
+
     @GetMapping("/articles")
-    public String getArticles(@RequestParam(name = "order",defaultValue = "desc") String order, Model model) {
-        List<ArticleListViewResponse> articles = blogService.getArticleSorted(order).stream()
-                .map(ArticleListViewResponse::new)
-                .toList();
-        model.addAttribute("articles", articles);
+    public String getArticles(@RequestParam(name = "order",defaultValue = "desc") String order,
+            @RequestParam(name = "page",defaultValue = "0") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size,
+             Model model) {
+
+
+        Page<ArticleListViewResponse> articlePage  = blogService.getArticlePage(order, page, size);
+        model.addAttribute("articles", articlePage);
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages",articlePage.getTotalPages());
+        model.addAttribute("totalItems",articlePage.getTotalElements());
+        model.addAttribute("order",order);
+        model.addAttribute("size", size);
 
         return "articleList";
     }

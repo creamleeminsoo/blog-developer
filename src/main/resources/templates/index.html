@@ -64,10 +64,8 @@
             <h4>게시판</h4>
             <ul class="list-group">
                 <li class="list-group-item"><a href="/articles">일기장 목록</a></li>
-                <li class="list-group-item"><a href="/articles/1">기술</a></li>
-                <li class="list-group-item"><a href="/articles/2">기능</a></li>
             </ul>
-            <h4 class="mt-4">최신 댓글</h4>
+            <h4 class="mt-4">최근 올라온 댓글</h4>
             <div class="comment-section list-group" id="recent-comments">
                 <div th:each="comment : ${comments}" class="list-group-item">
                     <p th:text="${comment.content}">댓글 내용</p>
@@ -83,7 +81,7 @@
                 <h4 class="mb-3 welcome-message">일기장에 오신 것을 환영합니다.</h4>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <h2>글 목록</h2>
+                <h2>최근 올라온 글</h2>
 
             </div>
 

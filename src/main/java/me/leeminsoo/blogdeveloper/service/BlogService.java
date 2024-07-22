@@ -7,22 +7,21 @@ import me.leeminsoo.blogdeveloper.config.error.exception.CommentNotFoundExceptio
 import me.leeminsoo.blogdeveloper.domain.Article;
 import me.leeminsoo.blogdeveloper.domain.ArticleImage;
 import me.leeminsoo.blogdeveloper.domain.Comment;
-import me.leeminsoo.blogdeveloper.dto.AddArticleRequest;
-import me.leeminsoo.blogdeveloper.dto.AddCommentRequest;
-import me.leeminsoo.blogdeveloper.dto.UpdateArticleRequest;
-import me.leeminsoo.blogdeveloper.dto.UpdateCommentRequest;
+import me.leeminsoo.blogdeveloper.dto.*;
 import me.leeminsoo.blogdeveloper.repository.BlogRepository;
 import me.leeminsoo.blogdeveloper.repository.CommentRepository;
 import me.leeminsoo.blogdeveloper.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -110,26 +109,23 @@ public class BlogService {
         }
     }
 
-    public List<Article> getArticleSorted(String order) {
-        if (order.equals("desc")) {
-            return blogRepository.findAllByOrderByIdDesc();
-        } else {
-            return blogRepository.findAllByOrderByIdAsc();
-        }
-
+    public Page<ArticleListViewResponse> getArticlePage(String order, int page, int size) {
+        Sort sort = Sort.by(Sort.Direction.fromString(order),"id");
+        Pageable pageable = PageRequest.of(page, size, sort);
+        Page<Article> articlePage = blogRepository.findAll(pageable);
+        return articlePage.map(ArticleListViewResponse::new);
     }
 
 
-    public void comment_delete(long id) {
+    public void comment_delete(Long id) {
         Comment comment = commentRepository.findById(id).orElseThrow(CommentNotFoundException::new);
-        ;
 
         authorizeArticleAuthor(comment);
         commentRepository.deleteById(id);
     }
 
     @Transactional
-    public Comment comment_update(long id, UpdateCommentRequest request) {
+    public Comment comment_update(Long id, UpdateCommentRequest request) {
         Comment comment = commentRepository.findById(id).orElseThrow(CommentNotFoundException::new);
 
         authorizeArticleAuthor(comment);

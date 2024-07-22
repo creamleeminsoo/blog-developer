@@ -20,109 +20,6 @@ if (homePageButton) {
 
 
 const deleteButton = document.getElementById('delete-btn');
-const commentCreatedButton = document.getElementById('comment-created-btn');
-const commentDeleteButtons = document.querySelectorAll('.comment-delete-btn');
-
-
-
-if (commentCreatedButton) {
-    commentCreatedButton.addEventListener('click', event => {
-        let articleId = document.getElementById('article-id').value;
-
-        let body = JSON.stringify({
-            articleId: articleId,
-            content: document.getElementById('content').value
-        });
-
-        function success() {
-            alert('등록 완료되었습니다.');
-            location.replace('/articles/' + articleId);
-        };
-
-        function fail() {
-            alert('등록 실패했습니다.');
-            location.replace('/articles/' + articleId);
-        };
-
-        httpRequest('POST', '/api/comments', body, success, fail);
-    });
-}
-//댓글삭제
-commentDeleteButtons.forEach(button => {
-    button.addEventListener('click', event => {
-        let articleId = document.getElementById('article-id').value;
-        let commentId = button.previousElementSibling.value;
-
-        function success() {
-            alert('삭제가 완료되었습니다.');
-            location.replace('/articles/' + articleId);
-        }
-
-        function fail() {
-            alert('삭제 실패했습니다.');
-            location.replace('/articles/' + articleId);
-        }
-
-        httpRequest('DELETE', `/api/comments/${commentId}`, null, success, fail);
-    });
-});
-
-
-// 댓글수정 기능
-const commentModifyButton = document.getElementById('comment-modify-btn');
-
-if (commentModifyButton) {
-    commentModifyButton.addEventListener('click', event => {
-
-        let params = new URLSearchParams(location.search);
-        let commentId = params.get('id');
-        let articleId = params.get('articleId');
-
-
-        let body = JSON.stringify({
-            content: document.getElementById('content').value
-        });
-
-        function success() {
-            alert('수정 완료되었습니다.');
-            location.replace('/articles/' + articleId);
-
-        }
-
-        function fail() {
-            alert('수정 실패했습니다.');
-            location.replace('/articles/' + articleId);
-        }
-
-        httpRequest('PUT', `/api/comments/${commentId}`, body, success, fail);
-    });
-}
-
-
-const sortLatestButton = document.getElementById('sort-latest-btn');
-
-
-if (sortLatestButton) {
-    sortLatestButton.addEventListener('click', event => {
-        let articleId = document.getElementById('article-id').value;
-
-        window.location.href = '/articles/' + articleId + '?order=desc';
-
-
-    });
-}
-const sortOldestButton = document.getElementById('sort-oldest-btn');
-if (sortOldestButton) {
-    sortOldestButton.addEventListener('click', event => {
-        let articleId = document.getElementById('article-id').value;
-
-        window.location.href = '/articles/' + articleId + '?order=asc';
-
-
-    });
-}
-
-
 //글삭제 스크립트
 if (deleteButton) {
     deleteButton.addEventListener('click', event => {
@@ -194,9 +91,6 @@ if (createButton) {
 }
 
 
-
-
-
 // 쿠키를 가져오는 함수
 function getCookie(key) {
     let result = null;
@@ -255,5 +149,6 @@ function httpRequest(method, url, body, success, fail) {
         }
     });
 }
+
 
 
