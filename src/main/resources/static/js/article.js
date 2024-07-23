@@ -150,5 +150,18 @@ function httpRequest(method, url, body, success, fail) {
     });
 }
 
+const searchButton = document.getElementById('search-btn');
+
+if (searchButton) {
+    searchButton.addEventListener('click', event => {
+        const keyword = document.getElementById('searchKeyword').value;
+        if (keyword) {
+            window.location.href = `/search?keyword=${keyword}`;
+        } else {
+            alert('검색어를 입력하세요.');
+        }
+    });
+}
+
 
 

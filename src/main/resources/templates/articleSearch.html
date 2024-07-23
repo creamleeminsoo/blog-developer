@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>블로그 글 목록</title>
+    <title>검색 결과</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -51,7 +51,6 @@
         .custom-text {
             padding-left: 350px;
         }
-
         .search-container {
             max-width: 750px;
             margin: 0 auto;
@@ -96,7 +95,6 @@
             th:onclick="|location.href='@{/new-article}'|"
             class="btn btn-outline-primary btn-sm">글 등록
         <img src="/img/Create.png" alt="글 등록" class="ml-2" style="height: 20px;"></button>
-
     <div class="input-group mt-3 search-container">
         <input type="text" id="searchKeyword" class="form-control search-input" placeholder="검색어를 입력하세요">
         <div class="input-group-append">
@@ -105,20 +103,8 @@
             </button>
         </div>
     </div>
-
-    <section class="mt-3">
-        <button type="button" id="article-sort-latest-btn" class="btn btn-outline-primary btn-sm"
-                th:onclick="'location.href=\'/articles?order=desc&page=0&size=' + ${size} + '\''">
-            최신순
-        </button>
-        <button type="button" id="article-sort-oldest-btn" class="btn btn-outline-primary btn-sm"
-                th:onclick="'location.href=\'/articles?order=asc&page=0&size=' + ${size} + '\''">
-            등록순
-        </button>
-    </section>
-
-    <div class="row" id="articlesContainer" th:each="item : ${articles}">
-        <div class="col-md-9">
+    <div class="row" id="articlesContainer">
+        <div th:each="item : ${articles}" class="col-md-9">
             <div class="card article-card">
                 <div class="card-header bg-custom">
                     <span th:text="${item.id} + '번째 글  '"></span>
@@ -126,7 +112,8 @@
                 </div>
 
                 <div class="card-body">
-                    <h4 class="card-title" th:text="${item.title}"></h4>
+                    <h4 class="card-title" th:text="${item.title}">
+                    </h4>
                     <a th:href="@{/articles/{id}(id=${item.id})}" class="btn btn-outline-info">보러가기</a>
                 </div>
             </div>
@@ -135,7 +122,7 @@
 
     <div>
         <span th:each="pageNum : ${#numbers.sequence(0, totalPages - 1)}">
-            <a th:href="'/articles?order=' + ${order} + '&page=' + ${pageNum} + '&size=' + ${size}"
+            <a th:href="'/search?keyword=' + ${keyword} + '&page=' + ${pageNum} + '&size=' + ${size}"
                th:text="${pageNum + 1}"
                th:classappend="${pageNum == currentPage} ? 'btn btn-primary' : 'btn btn-outline-info'"></a>
         </span>
@@ -143,11 +130,15 @@
 
     <div>
         <a th:if="${currentPage > 0}"
-           th:href="'/articles?order=' + ${order} + '&page=' + (${currentPage} - 1) + '&size=' + ${size}"
-           class="btn btn-outline-info">이전</a>
+           th:href="'/search?keyword=' + ${keyword} + '&page=' + (${currentPage} - 1) + '&size=' + ${size}"
+           class="btn btn-outline-info">
+            이전
+        </a>
         <a th:if="${currentPage < totalPages - 1}"
-           th:href="'/articles?order=' + ${order} + '&page=' + (${currentPage} + 1) + '&size=' + ${size}"
-           class="btn btn-outline-info">다음</a>
+           th:href="'/search?keyword=' + ${keyword} + '&page=' + (${currentPage} + 1) + '&size=' + ${size}"
+           class="btn btn-outline-info">
+            다음
+        </a>
     </div>
     <input type="hidden" id="currentPage" th:value="${currentPage}" />
     <input type="hidden" id="size" th:value="${size}" />

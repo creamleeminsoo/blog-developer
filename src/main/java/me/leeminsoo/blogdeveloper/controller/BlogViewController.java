@@ -13,6 +13,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -74,6 +77,21 @@ public class BlogViewController {
 
         return "article";
     }
+    @GetMapping("/search")
+    public String search(@RequestParam(name = "keyword") String keyword, Model model,
+                         @PageableDefault(sort = "id",direction = Sort.Direction.DESC) Pageable pageable) {
+        Page<ArticleListViewResponse> searchList = blogService.searchArticle(keyword,pageable);
+        model.addAttribute("articles",searchList);
+        model.addAttribute("keyword", keyword);
+        model.addAttribute("currentPage", pageable.getPageNumber());
+        model.addAttribute("totalPages", searchList.getTotalPages());
+        model.addAttribute("size", pageable.getPageSize());
+        return "articleSearch";
+    }
+
+
+
+
     @GetMapping("/new-article")
     public String newArticle(@RequestParam(required = false,name = "id") Long id, Model model){
         if(id == null) {

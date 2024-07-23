@@ -189,5 +189,11 @@ public class BlogService {
         return imageRepository.findTop10ByOrderById();
     }
 
+    @Transactional
+    public Page<ArticleListViewResponse> searchArticle(String keyword,Pageable pageable) {
+        Page<Article> searchPage =  blogRepository.findByTitleContaining(keyword,pageable);
+        return searchPage.map(ArticleListViewResponse::new);
+    }
+
 
 }

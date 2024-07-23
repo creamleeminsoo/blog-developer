@@ -36,11 +36,35 @@
             font-weight: bold;
             color: #6c757d;
         }
+        .search-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .search-input {
+            height: 50px;
+            border-radius: 25px 0 0 25px;
+            font-size: 1.2rem;
+            padding-left: 20px;
+        }
+        .search-btn {
+            height: 50px;
+            border-radius: 0 25px 25px 0;
+            background-color: #FAFFFF;
+            border: 1px solid #ced4da;
+            display: flex; #FAFFFF;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .search-icon {
+            width: 35px;
+            height: 35px;
+        }
 
     </style>
 </head>
 <body>
-<!-- 네비게이션 바 -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">나의 일기장</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,11 +98,18 @@
             </div>
         </div>
 
-
         <div class="col-md-9 main-content">
             <div class="p-5 mb-5 text-center bg-custom">
                 <h1 id="my-blog-link" class="mb-3 font-weight-bold">Diary</h1>
                 <h4 class="mb-3 welcome-message">일기장에 오신 것을 환영합니다.</h4>
+            </div>
+            <div class="input-group mt-3 search-container">
+                <input type="text" id="searchKeyword" class="form-control search-input" placeholder="검색어를 입력하세요">
+                <div class="input-group-append">
+                    <button type="button" id="search-btn" class="btn btn-outline-secondary search-btn">
+                        <img src="/img/Search.png" alt="검색" class="search-icon">
+                    </button>
+                </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2>최근 올라온 글</h2>

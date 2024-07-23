@@ -11,3 +11,7 @@ INSERT INTO comments (article_id, author, content, created_at) VALUES (3,'user2'
 INSERT INTO comments (article_id, author, content, created_at) VALUES (4,'user1','comments와 article은 다대일 관계입니다',NOW())
 INSERT INTO comments (article_id, author, content, created_at) VALUES (4,'user2','articleImage와 article또한 다대일 관계입니다',NOW())
 INSERT INTO comments (article_id, author, content, created_at) VALUES (5,'user1','홈페이지에서도 잘보여요',NOW())
+INSERT INTO article (title, content, author, created_at, updated_at) VALUES ('spring은 엔터프라이즈 어플리케이션을 쉽게 개발할수 있도록 도와주는 프레임워크입니다', '내용', 'spring', NOW(), NOW())
+INSERT INTO article (title, content, author, created_at, updated_at) VALUES ('spring boot는 스프링을 더 빠르고 쉽게 사용할수있도록 스타터와 자동구성을 제공해주는 도구입니다', '내용', 'spring', NOW(), NOW())
+INSERT INTO article (title, content, author, created_at, updated_at) VALUES ('spring의 중요한 특성인 DI는 객체 간의 의존성을 외부에서 주입받아 애플리케이션의 유연성과 테스트 용이성을 높여줍니다', '내용', 'spring', NOW(), NOW())
+INSERT INTO article (title, content, author, created_at, updated_at) VALUES ('springSecurity는 스프링기반 어플리케이션의 보안을 담당합니다  ', '내용', 'spring', NOW(), NOW())
