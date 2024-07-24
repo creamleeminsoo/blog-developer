@@ -1,4 +1,4 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.image;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

@@ -5,11 +5,11 @@ import me.leeminsoo.blogdeveloper.config.error.ErrorCode;
 import me.leeminsoo.blogdeveloper.domain.Article;
 import me.leeminsoo.blogdeveloper.domain.Comment;
 import me.leeminsoo.blogdeveloper.domain.User;
-import me.leeminsoo.blogdeveloper.dto.AddArticleRequest;
-import me.leeminsoo.blogdeveloper.dto.AddCommentRequest;
-import me.leeminsoo.blogdeveloper.dto.UpdateArticleRequest;
-import me.leeminsoo.blogdeveloper.dto.UpdateCommentRequest;
-import me.leeminsoo.blogdeveloper.repository.BlogRepository;
+import me.leeminsoo.blogdeveloper.dto.article.AddArticleRequest;
+import me.leeminsoo.blogdeveloper.dto.comment.AddCommentRequest;
+import me.leeminsoo.blogdeveloper.dto.article.UpdateArticleRequest;
+import me.leeminsoo.blogdeveloper.dto.comment.UpdateCommentRequest;
+import me.leeminsoo.blogdeveloper.repository.ArticleRepository;
 
 import me.leeminsoo.blogdeveloper.repository.CommentRepository;
 import me.leeminsoo.blogdeveloper.repository.UserRepository;
@@ -59,7 +59,7 @@ class BlogApiControllerTest {
     private WebApplicationContext context;
 
     @Autowired
-    BlogRepository blogRepository;
+    ArticleRepository articleRepository;
 
     @Autowired
     UserRepository userRepository;
@@ -73,7 +73,7 @@ class BlogApiControllerTest {
     public void mockMvcSetUp() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(context)
                 .build();
-        blogRepository.deleteAll();
+        articleRepository.deleteAll();
         commentRepository.deleteAll();
     }
 
@@ -114,7 +114,7 @@ class BlogApiControllerTest {
         // then
         result.andExpect(status().isCreated());
 
-        List<Article> articles = blogRepository.findAll();
+        List<Article> articles = articleRepository.findAll();
 
         assertThat(articles.size()).isEqualTo(1);
         assertThat(articles.get(0).getTitle()).isEqualTo(title);
@@ -169,7 +169,7 @@ class BlogApiControllerTest {
                 .andExpect(status().isOk());
 
         // then
-        List<Article> articles = blogRepository.findAll();
+        List<Article> articles = articleRepository.findAll();
 
         assertThat(articles).isEmpty();
     }
@@ -195,14 +195,14 @@ class BlogApiControllerTest {
         // then
         result.andExpect(status().isOk());
 
-        Article article = blogRepository.findById(savedArticle.getId()).get();
+        Article article = articleRepository.findById(savedArticle.getId()).get();
 
         assertThat(article.getTitle()).isEqualTo(newTitle);
         assertThat(article.getContent()).isEqualTo(newContent);
     }
 
     private Article createDefaultArticle() {
-        return blogRepository.save(Article.builder()
+        return articleRepository.save(Article.builder()
                 .title("title")
                 .author(user.getUsername())
                 .content("content")

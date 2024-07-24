@@ -1,4 +1,4 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.comment;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

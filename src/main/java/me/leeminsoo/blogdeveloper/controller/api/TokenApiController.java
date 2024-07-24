@@ -1,8 +1,8 @@
-package me.leeminsoo.blogdeveloper.controller;
+package me.leeminsoo.blogdeveloper.controller.api;
 
 import lombok.RequiredArgsConstructor;
-import me.leeminsoo.blogdeveloper.dto.CreateAccessTokenRequest;
-import me.leeminsoo.blogdeveloper.dto.CreateAccessTokenResponse;
+import me.leeminsoo.blogdeveloper.dto.user.CreateAccessTokenRequest;
+import me.leeminsoo.blogdeveloper.dto.user.CreateAccessTokenResponse;
 import me.leeminsoo.blogdeveloper.service.TokenService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -2,7 +2,7 @@ package me.leeminsoo.blogdeveloper.service;
 
 import lombok.RequiredArgsConstructor;
 import me.leeminsoo.blogdeveloper.domain.User;
-import me.leeminsoo.blogdeveloper.dto.AddUserRequest;
+import me.leeminsoo.blogdeveloper.dto.user.AddUserRequest;
 import me.leeminsoo.blogdeveloper.repository.RefreshTokenRepository;
 import me.leeminsoo.blogdeveloper.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

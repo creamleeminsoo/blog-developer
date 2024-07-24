@@ -99,11 +99,11 @@
                         <div class="text-muted fst-italic mb-2"
                              th:text="|댓글 쓴 시간 ${#temporals.format(comment.createdAt, 'yyyy-MM-dd HH:mm')} 글쓴이 ${comment.author}|"> </div>
                         <p class="card-text" th:text="${comment.content}"></p>
-                        <input type="hidden" class="comment-id" th:value="${comment.id}">
-                        <button type="button" class="comment-delete-btn btn btn-danger btn-sm">삭제</button>
-                        <button type="button" id="comment-modify-btn"
-                                th:onclick="|location.href='@{/new-comment?id={commentId}&articleId={articleId}(commentId=${comment.id}, articleId=${article.id})}'|"
-                                class="btn btn-primary btn-sm">수정</button>
+                        <button type="button" class="comment-delete-btn btn btn-danger btn-sm" th:data-comment-id="${comment.id}">삭제</button>
+                        <button type="button"
+                                th:onclick="|location.href='@{/new-comment?commentId={commentId}&articleId={articleId}(commentId=${comment.id}, articleId=${article.id})}'|"
+                                class="btn btn-primary btn-sm">수정
+                            </button>
                     </div>
                 </div>
             </section>

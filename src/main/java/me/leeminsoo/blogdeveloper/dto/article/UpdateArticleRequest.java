@@ -1,4 +1,4 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.article;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

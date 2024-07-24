@@ -5,7 +5,7 @@ import me.leeminsoo.blogdeveloper.config.jwt.JwtFactory;
 import me.leeminsoo.blogdeveloper.config.jwt.JwtProperties;
 import me.leeminsoo.blogdeveloper.domain.RefreshToken;
 import me.leeminsoo.blogdeveloper.domain.User;
-import me.leeminsoo.blogdeveloper.dto.CreateAccessTokenRequest;
+import me.leeminsoo.blogdeveloper.dto.user.CreateAccessTokenRequest;
 import me.leeminsoo.blogdeveloper.repository.RefreshTokenRepository;
 import me.leeminsoo.blogdeveloper.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;

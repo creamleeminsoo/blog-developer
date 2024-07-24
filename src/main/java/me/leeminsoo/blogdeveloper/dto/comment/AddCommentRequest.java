@@ -1,27 +1,23 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.comment;
 
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.leeminsoo.blogdeveloper.domain.Article;
-
+import me.leeminsoo.blogdeveloper.domain.Comment;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class AddArticleRequest {
-    @NotNull
-    @Size(min =1, max = 20)
-    private String title;
-
+public class AddCommentRequest {
+    private Long articleId;
     @NotNull
     private String content;
 
-    public Article toEntity(String author) {
-        return Article.builder()
-                .title(title)
+    public Comment toEntity(String author, Article article) {
+        return Comment.builder()
+                .article(article)
                 .content(content)
                 .author(author)
                 .build();

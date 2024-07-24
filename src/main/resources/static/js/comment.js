@@ -1,5 +1,5 @@
 
-// 쿠키를 가져오는 함수
+
 function getCookie(key) {
     let result = null;
     let cookie = document.cookie.split(';');
@@ -17,11 +17,11 @@ function getCookie(key) {
     return result;
 }
 
-// HTTP 요청을 보내는 함수
+
 function httpRequest(method, url, body, success, fail) {
     fetch(url, {
         method: method,
-        headers: { // 로컬 스토리지에서 액세스 토큰 값을 가져와 헤더에 추가
+        headers: {
             Authorization: 'Bearer ' + localStorage.getItem('access_token'),
             'Content-Type': 'application/json',
         },
@@ -62,7 +62,7 @@ function httpRequest(method, url, body, success, fail) {
 
 
 const commentCreatedButton = document.getElementById('comment-created-btn');
-const commentDeleteButtons = document.querySelectorAll('.comment-delete-btn');
+
 
 
 if (commentCreatedButton) {
@@ -88,24 +88,29 @@ if (commentCreatedButton) {
     });
 }
 
-//댓글삭제
+
+const commentDeleteButtons = document.querySelectorAll('.comment-delete-btn');
+
 commentDeleteButtons.forEach(button => {
     button.addEventListener('click', event => {
-        let articleId = document.getElementById('article-id').value;
-        let commentId = document.getElementById('comment-id').value;
+        const commentId = button.getAttribute('data-comment-id');
+        const articleId = document.getElementById('article-id').value;
 
-        function success() {
-            alert('삭제가 완료되었습니다.');
-            location.replace('/articles/' + articleId);
-        }
+        if (confirm('댓글을 삭제하시겠습니까?')) {
 
-        function fail() {
-            alert('삭제 실패했습니다.');
-            location.replace('/articles/' + articleId);
-        }
+            function success() {
+                 alert('삭제가 완료되었습니다.');
+                 location.replace('/articles/' + articleId);
+            }
 
-        httpRequest('DELETE', `/api/comments/${commentId}`, null, success, fail);
-    });
+            function fail() {
+                alert('삭제 실패했습니다.');
+                location.replace('/articles/' + articleId);
+            }
+
+            httpRequest('DELETE', `/api/comments/${commentId}`, null, success, fail);
+            }
+        });
 });
 
 
@@ -115,7 +120,7 @@ if (commentModifyButton) {
     commentModifyButton.addEventListener('click', event => {
 
         let params = new URLSearchParams(location.search);
-        let commentId = document.getElementById('comment-id').value;
+        let commentId = params.get('commentId');
         let articleId = params.get('articleId');
 
 
@@ -137,5 +142,27 @@ if (commentModifyButton) {
         }
 
         httpRequest('PUT', `/api/comments/${commentId}`, body, success, fail);
+    });
+}
+
+const sortLatestButton = document.getElementById('sort-latest-btn');
+
+if (sortLatestButton) {
+    sortLatestButton.addEventListener('click', event => {
+        let articleId = document.getElementById('article-id').value;
+
+        window.location.href = '/articles/' + articleId + '?order=desc';
+
+
+    });
+}
+const sortOldestButton = document.getElementById('sort-oldest-btn');
+if (sortOldestButton) {
+    sortOldestButton.addEventListener('click', event => {
+        let articleId = document.getElementById('article-id').value;
+
+        window.location.href = '/articles/' + articleId + '?order=asc';
+
+
     });
 }

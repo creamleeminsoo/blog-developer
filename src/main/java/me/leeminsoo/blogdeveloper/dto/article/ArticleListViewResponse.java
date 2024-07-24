@@ -1,4 +1,4 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.article;
 
 import lombok.Getter;
 import me.leeminsoo.blogdeveloper.domain.Article;

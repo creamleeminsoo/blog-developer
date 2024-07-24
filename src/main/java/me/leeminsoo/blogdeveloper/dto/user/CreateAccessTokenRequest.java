@@ -1,4 +1,4 @@
-package me.leeminsoo.blogdeveloper.dto;
+package me.leeminsoo.blogdeveloper.dto.user;
 
 import lombok.Getter;
 import lombok.Setter;
