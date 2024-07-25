@@ -19,8 +19,10 @@ public class ArticleViewResponse {
     private String content;
     private LocalDateTime createdAt;
     private String author;
+    private Integer view;
     private List<Comment> comments;
     private List<ArticleImage> images;
+
 
     public ArticleViewResponse(Article article){
         this.id = article.getId();
@@ -30,6 +32,7 @@ public class ArticleViewResponse {
         this.author = article.getAuthor();
         this.comments = article.getComments();
         this.images = article.getArticleImages();
+        this.view = article.getView();
     }
 
 

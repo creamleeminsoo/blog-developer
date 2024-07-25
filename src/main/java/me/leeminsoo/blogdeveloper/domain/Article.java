@@ -39,6 +39,9 @@ public class Article {
     @Column(name = "author", nullable = false)
     private String author;
 
+    @Column(name = "view", nullable = false,columnDefinition = "integer default 0")
+    private int view;
+
     @Builder
     public Article(String author, String title, String content) {
         this.author = author;

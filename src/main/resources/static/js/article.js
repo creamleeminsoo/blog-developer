@@ -20,26 +20,29 @@ if (homePageButton) {
 
 
 const deleteButton = document.getElementById('delete-btn');
-//글삭제 스크립트
+
 if (deleteButton) {
     deleteButton.addEventListener('click', event => {
         let id = document.getElementById('article-id').value;
 
-        function success() {
-            alert('삭제가 완료되었습니다.');
-            location.replace('/articles');
-        }
 
-        function fail() {
-            alert('삭제 실패했습니다.');
-            location.replace('/articles');
+        if (confirm('글을 삭제하시겠습니까?')) {
+
+            function success() {
+                alert('삭제가 완료되었습니다.');
+                location.replace('/articles');
+            }
+
+            function fail() {
+                alert('삭제 실패했습니다.');
+                location.replace('/articles');
+            }
         }
 
         httpRequest('DELETE', `/api/articles/${id}`, null, success, fail);
     });
 }
 
-// 수정 기능
 const modifyButton = document.getElementById('modify-btn');
 
 if (modifyButton) {
@@ -66,7 +69,6 @@ if (modifyButton) {
     });
 }
 
-// 생성 기능
 const createButton = document.getElementById('create-btn');
 
 if (createButton) {
@@ -90,8 +92,6 @@ if (createButton) {
     });
 }
 
-
-// 쿠키를 가져오는 함수
 function getCookie(key) {
     let result = null;
     let cookie = document.cookie.split(';');
@@ -109,7 +109,6 @@ function getCookie(key) {
     return result;
 }
 
-// HTTP 요청을 보내는 함수
 function httpRequest(method, url, body, success, fail) {
     fetch(url, {
         method: method,

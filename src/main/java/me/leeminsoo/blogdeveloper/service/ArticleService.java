@@ -43,10 +43,9 @@ public class ArticleService {
     public List<Article> findAll() {
         return articleRepository.findAll();
     }
-
+    @Transactional
     public Article findById(long id) {
-        return articleRepository.findById(id)
-                .orElseThrow(ArticleNotFoundException::new);
+        return articleRepository.findById(id).orElseThrow(ArticleNotFoundException::new);
     }
 
     @Transactional
@@ -129,5 +128,12 @@ public class ArticleService {
     public Page<ArticleListViewResponse> searchArticle(String keyword,Pageable pageable) {
         Page<Article> searchPage =  articleRepository.findByTitleContaining(keyword,pageable);
         return searchPage.map(ArticleListViewResponse::new);
+    }
+    @Transactional
+    public int updateView(Long id) {
+        if (!articleRepository.existsById(id)) {
+            throw new ArticleNotFoundException();
+        }
+        return articleRepository.updateView(id);
     }
 }

@@ -1,5 +1,7 @@
 package me.leeminsoo.blogdeveloper.controller.view;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import me.leeminsoo.blogdeveloper.domain.Article;
 import me.leeminsoo.blogdeveloper.domain.ArticleImage;
@@ -9,6 +11,7 @@ import me.leeminsoo.blogdeveloper.dto.article.ArticleViewResponse;
 import me.leeminsoo.blogdeveloper.service.ArticleService;
 import me.leeminsoo.blogdeveloper.service.CommentService;
 import me.leeminsoo.blogdeveloper.service.ImageService;
+import me.leeminsoo.blogdeveloper.util.CookieUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -45,7 +48,16 @@ public class ArticleViewController {
     }
 
     @GetMapping("/articles/{id}")
-    public String getArticle(@PathVariable(name = "id") Long id, @RequestParam(name = "order", defaultValue = "desc") String order, Model model) {
+    public String getArticle(@PathVariable(name = "id") Long id,
+                             @RequestParam(name = "order", defaultValue = "desc") String order,
+                             HttpServletRequest request, HttpServletResponse response,
+                             Model model) {
+        boolean isView = CookieUtil.checkIfViewed(request,id);
+        if (!isView) {
+            articleService.updateView(id);
+            CookieUtil.setViewCookie(request,response,id);
+        }
+
         Article article = articleService.findById(id);
         List<Comment> comments = commentService.getCommentsByArticleIdSorted(id, order);
         List<ArticleImage> images = imageService.getImagesByArticleId(id);

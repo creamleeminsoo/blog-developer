@@ -5,47 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5a2053-f3ad-48e8-b3b1-a3edbc7910dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/ArticleApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/CommentApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/ImageApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ArticleViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/CommentViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ImageViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogApiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/BlogViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/TokenApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/TokenApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/UserViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/UserViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/AddArticleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/AddArticleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/AddCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/comment/AddCommentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/AddCommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/comment/AddCommentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/AddUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/user/AddUserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleImageUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/image/ArticleImageUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleListViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleListViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/ArticleViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/user/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/CommentViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/comment/CommentViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/CreateAccessTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/user/CreateAccessTokenRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/CreateAccessTokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/user/CreateAccessTokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/UpdateArticleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/UpdateArticleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/UpdateCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/comment/UpdateCommentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/BlogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ArticleViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ArticleViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleListViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleListViewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleViewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newComment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newComment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/leeminsoo/blogdeveloper/controller/BlogApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/leeminsoo/blogdeveloper/controller/BlogApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/leeminsoo/blogdeveloper/controller/TokenApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/leeminsoo/blogdeveloper/controller/TokenApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

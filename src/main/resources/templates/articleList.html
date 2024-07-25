@@ -128,6 +128,7 @@
                 <div class="card-body">
                     <h4 class="card-title" th:text="${item.title}"></h4>
                     <a th:href="@{/articles/{id}(id=${item.id})}" class="btn btn-outline-info">보러가기</a>
+                    <span class="custom-text" th:text="'조회수' + ${item.view}" style="color: gray;"></span>
                 </div>
             </div>
         </div>
