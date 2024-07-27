@@ -1,6 +1,7 @@
 # :computer:프로젝트 소개 
+Spring Boot + JPA 웹 프로젝트
 ## :blue_book: 나의 Diary 블로그 개발
-이 프로젝트는 Spring Boot와 JPA를 사용하여 개발한 CRUD 기반 블로그 애플리케이션입니다. 
+이 프로젝트는 CRUD 기반 블로그 애플리케이션입니다. 
 
 코드의 형상 관리는 Git을 사용하였습니다
 
