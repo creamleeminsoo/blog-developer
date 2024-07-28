@@ -3,7 +3,7 @@ Spring Boot + JPA 웹 프로젝트
 ## :blue_book: 나의 Diary 블로그 개발
 이 프로젝트는 CRUD 기반 블로그 애플리케이션입니다. 
 
-코드의 형상 관리는 Git을 사용하였습니다
+코드의 형상 관리는 Git을 사용하였습니다.
 
 또한, 단위 테스트는 JUnit으로 수행하였으며, CI는 GitHub Actions을 활용하여 자동화 하였습니다. 
 
@@ -44,16 +44,18 @@ Spring Boot + JPA 웹 프로젝트
 
 *애플리케이션의 UI/UX 디자인을 소개합니다. 애니메이션을 통해 사용자의 상호작용 흐름을 시각적으로 이해할 수 있습니다.*
 
-## :low_brightness:개발환경
-- `Java (JDK17)`
+## :low_brightness: 개발 환경
+- `Java (JDK 17)`
 - `JavaScript`
-- **프레임워크** : SpringBoot 3.2.0
-- **ORM** : Jpa
-- **인증**: JWT, OAuth2(Google, kakao, naver) 
+- **프레임워크**: SpringBoot 3.2.0
+- **ORM**: JPA
+- **템플릿 엔진**: Thymeleaf
+
+## :wrench: 사용한 도구
+- **인증**: JWT, OAuth2 (Google, Kakao, Naver), Spring Security
 - **테스트**: JUnit
 - **형상 관리**: Git
-- **템플릿 엔진** :thymeleaf
-- **DBMS** : MySQL 
+- **CI**: GitHub Actions
 
 
 
