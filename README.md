@@ -53,6 +53,7 @@ Spring Boot + JPA 웹 프로젝트
 - **테스트**: JUnit
 - **형상 관리**: Git
 - **템플릿 엔진** :thymeleaf
+- **DBMS** : MySQL 
 
 
 
