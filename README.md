@@ -47,18 +47,9 @@ Spring Boot + JPA 웹 프로젝트
 
 *애플리케이션의 UI/UX 디자인을 소개합니다. 애니메이션을 통해 사용자의 상호작용 흐름을 시각적으로 이해할 수 있습니다.*
 
-<<<<<<< HEAD
-## :low_brightness:개발환경
-- `Java (JDK17)`
-- `JavaScript`
-- **프레임워크** : SpringBoot 3.2.0
-- **ORM** : Jpa
-- **인증**: JWT, OAuth2(Google, kakao, naver) 
-- **테스트**: JUnit
-- **형상 관리**: Git
-- **템플릿 엔진** :thymeleaf
-- **DBMS** : MySQL 
-=======
+
+
+
 ## :low_brightness: 개발 환경
 - `Java (JDK 17)`
 - `JavaScript`
@@ -71,7 +62,7 @@ Spring Boot + JPA 웹 프로젝트
 - **테스트**: JUnit
 - **형상 관리**: Git
 - **CI**: GitHub Actions
->>>>>>> c8498892d2145dab1e72acc57e150be419776196
+
 
 
 
