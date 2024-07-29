@@ -20,11 +20,11 @@ Spring Boot + JPA 웹 프로젝트
   - 게시글에 댓글을 생성, 읽기, 수정, 삭제 할수있는 기능
    
   
-<<<<<<< HEAD
+
 - **조회수 기능**
 =======
 - **조회수 기능** - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/view_count)
->>>>>>> c8498892d2145dab1e72acc57e150be419776196
+
   - 게시글 조회수를 기록하고 표시하는 기능
  
     
