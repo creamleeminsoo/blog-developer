@@ -3,7 +3,11 @@ Spring Boot + JPA 웹 프로젝트
 ## :blue_book: 나의 Diary 블로그 개발
 이 프로젝트는 CRUD 기반 블로그 애플리케이션입니다. 
 
+<<<<<<< HEAD
 코드의 형상 관리는 Git을 사용하였습니다
+=======
+코드의 형상 관리는 Git을 사용하였습니다.
+>>>>>>> c8498892d2145dab1e72acc57e150be419776196
 
 또한, 단위 테스트는 JUnit으로 수행하였으며, CI는 GitHub Actions을 활용하여 자동화 하였습니다. 
 
@@ -20,7 +24,11 @@ Spring Boot + JPA 웹 프로젝트
   - 게시글에 댓글을 생성, 읽기, 수정, 삭제 할수있는 기능
    
   
+<<<<<<< HEAD
 - **조회수 기능**
+=======
+- **조회수 기능** - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/view_count)
+>>>>>>> c8498892d2145dab1e72acc57e150be419776196
   - 게시글 조회수를 기록하고 표시하는 기능
  
     
@@ -44,6 +52,7 @@ Spring Boot + JPA 웹 프로젝트
 
 *애플리케이션의 UI/UX 디자인을 소개합니다. 애니메이션을 통해 사용자의 상호작용 흐름을 시각적으로 이해할 수 있습니다.*
 
+<<<<<<< HEAD
 ## :low_brightness:개발환경
 - `Java (JDK17)`
 - `JavaScript`
@@ -54,6 +63,20 @@ Spring Boot + JPA 웹 프로젝트
 - **형상 관리**: Git
 - **템플릿 엔진** :thymeleaf
 - **DBMS** : MySQL 
+=======
+## :low_brightness: 개발 환경
+- `Java (JDK 17)`
+- `JavaScript`
+- **프레임워크**: SpringBoot 3.2.0
+- **ORM**: JPA
+- **템플릿 엔진**: Thymeleaf
+
+## :wrench: 사용한 도구
+- **인증**: JWT, OAuth2 (Google, Kakao, Naver), Spring Security
+- **테스트**: JUnit
+- **형상 관리**: Git
+- **CI**: GitHub Actions
+>>>>>>> c8498892d2145dab1e72acc57e150be419776196
 
 
 

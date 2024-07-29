@@ -31,7 +31,7 @@ public class CookieUtil {
         String encodedValue = Base64.getUrlEncoder().encodeToString(updatedViewArticles.getBytes());
         long todayEndSecond = LocalDate.now().atTime(LocalTime.MAX).toEpochSecond(ZoneOffset.UTC);
         long currentSecond = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
-        addCookie(response, COOKIE_NAME, encodedValue, (int)(todayEndSecond-currentSecond)); //쿠키 만료시간 30분으로 지정
+        addCookie(response, COOKIE_NAME, encodedValue, (int)(todayEndSecond-currentSecond));
     }
 
     private static Set<Long> getCurrentViewedArticles(HttpServletRequest request) {
