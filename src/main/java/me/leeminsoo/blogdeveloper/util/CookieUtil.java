@@ -6,6 +6,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.SerializationUtils;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.HashSet;
@@ -25,7 +29,9 @@ public class CookieUtil {
                 .map(String::valueOf)
                 .collect(Collectors.joining(","));
         String encodedValue = Base64.getUrlEncoder().encodeToString(updatedViewArticles.getBytes());
-        addCookie(response, COOKIE_NAME, encodedValue, 60*30); //쿠키 만료시간 30분으로 지정
+        long todayEndSecond = LocalDate.now().atTime(LocalTime.MAX).toEpochSecond(ZoneOffset.UTC);
+        long currentSecond = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
+        addCookie(response, COOKIE_NAME, encodedValue, (int)(todayEndSecond-currentSecond)); //쿠키 만료시간 30분으로 지정
     }
 
     private static Set<Long> getCurrentViewedArticles(HttpServletRequest request) {

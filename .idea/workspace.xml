@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5a2053-f3ad-48e8-b3b1-a3edbc7910dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ArticleViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/view/ArticleViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/domain/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleListViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleListViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleViewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/dto/article/ArticleViewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +62,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
