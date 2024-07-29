@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -100,6 +101,9 @@ public class ArticleService {
         authorizeArticleAuthor(article);
         if (images != null && !images.isEmpty()) {
             for (MultipartFile file : images) {
+                if (!isValidImageFile(file)) {
+                    throw new IllegalArgumentException("PNG또는 JPEG 확장자파일만 업로드 가능합니다");
+                }
                 UUID uuid = UUID.randomUUID();
                 String imageFileName = uuid + "_" + file.getOriginalFilename();
                 File destinationFile = new File(uploadFolder + imageFileName);
@@ -135,5 +139,10 @@ public class ArticleService {
             throw new ArticleNotFoundException();
         }
         return articleRepository.updateView(id);
+    }
+
+    public boolean isValidImageFile(MultipartFile file) {
+        String contentType = file.getContentType();
+        return contentType.equals(MediaType.IMAGE_JPEG_VALUE) || contentType.equals(MediaType.IMAGE_PNG_VALUE);
     }
 }

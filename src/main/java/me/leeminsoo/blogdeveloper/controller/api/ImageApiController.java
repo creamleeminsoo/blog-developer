@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 public class ImageApiController {
 
-    private final ImageService imageService;
     private final ArticleService articleService;
 
 

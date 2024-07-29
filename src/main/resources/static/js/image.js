@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 이미지 업로드 폼 제출 시
     if (imageUploadForm) {
         imageUploadForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // 기본 폼 제출 방지
+            event.preventDefault();
 
             const formData = new FormData(imageUploadForm);
 

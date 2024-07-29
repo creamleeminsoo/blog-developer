@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5a2053-f3ad-48e8-b3b1-a3edbc7910dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/util/CookieUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/ImageApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/controller/api/ImageApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/leeminsoo/blogdeveloper/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/image.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
