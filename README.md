@@ -22,9 +22,11 @@ Spring Boot + JPA 웹 프로젝트
   
 - **댓글 CRUD**
   - 게시글에 댓글을 생성, 읽기, 수정, 삭제 할수있는 기능
+   
+  
 
 - **조회수 기능** - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/view_count)
->>>>>>> c8498892d2145dab1e72acc57e150be419776196
+
   - 게시글 조회수를 기록하고 표시하는 기능
  
     
@@ -39,7 +41,7 @@ Spring Boot + JPA 웹 프로젝트
   - 게시글 목록을 페이지 단위로 나누어 표시하는 기능
  
   
-- **이미지 기능**
+- **이미지 기능** - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/image)
   - 게시글에 이미지를 업로드 하고 관리 할수있는 기능
 ## :eye: UI/UX
 
@@ -47,6 +49,7 @@ Spring Boot + JPA 웹 프로젝트
 
 
 *애플리케이션의 UI/UX 디자인을 소개합니다. 애니메이션을 통해 사용자의 상호작용 흐름을 시각적으로 이해할 수 있습니다.*
+
 
 ## :low_brightness: 개발 환경
 - `Java (JDK 17)`
