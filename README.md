@@ -38,7 +38,7 @@ Spring Boot + JPA 웹 프로젝트
   - 게시글 목록을 페이지 단위로 나누어 표시하는 기능
  
   
-- **이미지 기능**
+- **이미지 기능** - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/image)
   - 게시글에 이미지를 업로드 하고 관리 할수있는 기능
 ## :eye: UI/UX
 
