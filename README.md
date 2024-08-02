@@ -50,7 +50,7 @@ Spring Boot + JPA 웹 프로젝트
 
 - **인증**  - [상세 설명](https://github.com/creamleeminsoo/blog-developer/wiki/authentication)
    - JWT 및 OAuth2를 이용한 사용자 인증
-## :eye: UI/UX
+## :eye: UIUX
 
 ![Diary-Chrome2024-07-2717-47-23-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/45c9e414-9148-42c2-9793-18ca1a9aa317)
 
