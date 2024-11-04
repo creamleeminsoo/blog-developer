@@ -6,9 +6,6 @@ Spring Boot + JPA 웹 프로젝트
 
 코드의 형상 관리는 Git을 사용하였습니다.
 
-또한, 단위 테스트는 JUnit으로 수행하였으며, CI는 GitHub Actions을 활용하여 자동화 하였습니다. 
-
-
 ## :mag: 기능
 
  
