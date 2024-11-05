@@ -6,6 +6,15 @@ Spring Boot + JPA 웹 프로젝트
 
 코드의 형상 관리는 Git을 사용하였습니다.
 
+AWS를 통해 배포를 경험해봤으며 CI/CD 파이프라인 구축을 위해 GithubActions를 사용했습니다.
+
+## :walking: 개발인원
+1인 프로젝트
+
+## :watch: 개발기간
+
+2024.05 ~ 2024.07 (2달)
+
 ## :mag: 기능
 
  
@@ -60,7 +69,7 @@ Spring Boot + JPA 웹 프로젝트
 - **인증**: JWT, OAuth2 (Google, Kakao, Naver), Spring Security
 - **테스트**: JUnit
 - **형상 관리**: Git
-- **CI**: GitHub Actions
+- **CI/CD**: GitHub Actions
 
 
 
