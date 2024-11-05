@@ -70,6 +70,7 @@ AWS를 통해 배포를 경험해봤으며 CI/CD 파이프라인 구축을 위�
 - **테스트**: JUnit
 - **형상 관리**: Git
 - **CI/CD**: GitHub Actions
+- **배포**: AWS(ElasticBeanstalk,RDS)
 
 
 
